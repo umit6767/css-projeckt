@@ -1,0 +1,88 @@
+/*RESET CSS*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/*GENERAL CSS END*/
+
+
+
+header{
+    width: 100%;
+    min-height: 75px;
+    background-color: rgba(48, 48, 48);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+
+}
+
+.logocontainer img{
+    width: 75px;
+}
+
+nav ul{
+    
+    display: flex;
+    align-self: center;
+    gap: 20px;
+}
+.navlink{
+    color: rgb(170, 170, 170);
+}
+.navlink:hover{
+    color: #fff;
+}
+
+#menuCheck{
+    display: none;
+
+}
+#menulabel{
+    display: none;
+}
+
+
+
+@media screen and (max-width: 700px){
+    nav ul{
+        display: none;
+    }
+    header{
+        padding: 0px 10px;
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+  nav ul{
+    display: none;
+    gap: 0px;
+  } 
+  #menuCheck{
+    display: block;
+    visibility: hidden;
+  } 
+  #menulabel{
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    color: rgb(248, 189, 113);
+}
+#menuCheck:checked+ul{
+    display: flex;
+    flex-direction: column;
+}
+nav{
+    width: 100%;
+}
+.navli{
+    width: 100%;
+    text-align: center;
+    padding: 5px 0px;
+}
+}
